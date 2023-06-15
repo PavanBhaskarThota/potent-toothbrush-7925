@@ -6,14 +6,22 @@
     <title>Little Minds</title>
 
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Apple Chancery;
+      }
+
       .nav {
+        width: 95%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        margin: auto;
       }
 
       .nav > div:nth-child(1) {
-        width: 20%;
+        width: 15%;
       }
 
       .nav > div:nth-child(1) img {
@@ -43,15 +51,98 @@
         color: white;
         background-color: black;
       }
+
+      .mid {
+        width: 85%;
+        margin: auto;
+      }
+
+      .mid img {
+        width: 100%;
+      }
+
+      .mid-part1 {
+        margin: auto;
+      }
+
+      .mid-part1 > div {
+        margin-bottom: 50px;
+      }
+
+      .mid-part1 img {
+        width: 100%;
+      }
+
+      #mid-part1-2 {
+        display: flex;
+      }
+
+      .mid-part2 > div:nth-child(1) {
+        width: 70%;
+        text-align: center;
+        font-size: 28px;
+        margin: auto;
+      }
+
+      .mid-part2 > div:nth-child(2) {
+        display: flex;
+      }
+
+      .mid-part2 > div:nth-child(2) > div:nth-child(2) {
+        width: 70%;
+      }
+
+      .mid-part3 {
+        padding: 50px;
+        padding-bottom: 100px;
+        background-color: #fffaf5;
+        padding-top: 100px;
+      }
+
+      .mid-part3 > div:nth-child(1) {
+        display: flex;
+      }
+
+      .mid-part3 > div:nth-child(1) > div:nth-child(1) {
+        width: 80%;
+        line-height: 30px;
+      }
+
+      .mid-part3 > div:nth-child(1) > div:nth-child(1) p {
+        font-size: 24px;
+        line-height: 35px;
+      }
+
+      .mid-part3 > div:nth-child(1) img {
+        width: 100%;
+      }
+
+      .mid-part3 > div:nth-child(2) {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+      }
+
+      .mid-part3 > div:nth-child(2) > div:nth-child(2) {
+        width: 40%;
+        padding-bottom: 60px;
+      }
+      .mid-part3 > div:nth-child(2) > div:nth-child(2) a {
+        color: rgb(14, 211, 14);
+      }
+
+      .mid-part3 > div:nth-child(2) > div:nth-child(3) {
+        width: 60%;
+        padding-bottom: 40px;
+        line-height: 30px;
+        font-size: 20px;
+      }
     </style>
   </head>
   <body>
     <div class="nav">
       <div>
-        <img
-          src="https://cdn.shopify.com/s/files/1/0559/0345/3359/files/smicon2.jpg?v=1624113929"
-          alt=""
-        />
+        <img src="https://i.ibb.co/S0MxkTL/logo-edukin.png" alt="logo-edukin" />
       </div>
 
       <div>
@@ -64,72 +155,166 @@
       <button id="register">Registration</button>
     </div>
 
-    <div class="mid-part1">
-      <div>
-        <img src="" alt="" />
-      </div>
-      <div>
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-      </div>
-    </div>
-
-    <div class="mid-part2">
-      <h1>We love teaching new languages to kids</h1>
-
-      <div>
-        <img src="" alt="" />
-      </div>
-
-      <div>
-        <h1>Saint-Lambert Courses</h1>
-        <p>
-          Our Courses introduce Engligh through super fun and immensive
-          activities! The goal is to have a unique experince with the teacher,
-          the qroup and English this is the best way to learn!
-        </p>
-
-        <h1>New For Parents</h1>
-        <p>
-          We now have a conversation program for parents who want to practice
-          their English during their child's class
-        </p>
-      </div>
-    </div>
-
-    <div class="mid-part3">
-      <div>
+    <div class="mid">
+      <div class="mid-part1">
         <div>
-          <h1>Engligh Is Amazing With Us!</h1>
-          <p>
-            Our Courses introduce Engligh through super fun and immensive
-            activities! The goal is to have a unique experince with the teacher,
-            the qroup and English this is the best way to learn!
-          </p>
+          <img src="https://i.ibb.co/92KKDcY/Title.png" alt="" />
         </div>
-
-        <div>
-          <img src="" alt="" />
+        <div id="mid-part1-2">
+          <div>
+            <img
+              src="https://i.ibb.co/smCs41F/children-and-study-tools-01.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://i.ibb.co/zPmXVPN/children-and-study-tools-02.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://i.ibb.co/G73WStZ/children-and-study-tools-03.jpg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
 
-      <div>
+      <div class="mid-part2">
         <div>
-          <img src="" alt="" />
-        </div>
-        <div>
-          <p>The Longmobile Method</p>
-          <h2>It's Simple</h2>
-          <h2>The Best Way</h2>
+          <h1>We love teaching new languages to kids</h1>
         </div>
 
         <div>
-          <p>
-            To learn or practice a language is through fun, Our method is based
-            on interaction, through discovery, activities and challenges. And
-            with 20 years of teaching behind us, we know it works
-          </p>
+          <div>
+            <img src="https://i.ibb.co/jWxv9vf/children.png" alt="" />
+          </div>
+
+          <div>
+            <h1>Saint-Lambert Courses</h1>
+            <p>
+              Our Courses introduce Engligh through super fun and immensive
+              activities! The goal is to have a unique experince with the
+              teacher, the qroup and English this is the best way to learn!
+            </p>
+
+            <h1>New For Parents</h1>
+            <p>
+              We now have a conversation program for parents who want to
+              practice their English during their child's class
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mid-part3">
+        <div>
+          <div>
+            <h1>Engligh Is Amazing With Us!</h1>
+            <p>
+              Our Courses introduce Engligh through super fun and immensive
+              activities! The goal is to have a unique experince with the
+              teacher, the qroup and English this is the best way to learn!
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="https://i.ibb.co/64c7n98/Screenshot-2023-06-15-202826.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <img
+              src="https://i.ibb.co/LYTDNyZ/Screenshot-2023-06-15-202900.png"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <a href="#"> The Longmobile Method</a>
+            <h2>It's Simple</h2>
+            <h2>The Best Way</h2>
+          </div>
+
+          <div>
+            <p>
+              To learn or practice a language is through fun, Our method is
+              based on interaction, through discovery, activities and
+              challenges. And with 20 years of teaching behind us, we know it
+              works
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mid-part4">
+        <div>
+          <h1>The Best Way To Learn A languages Is To Connect!</h1>
+        </div>
+
+        <div>
+          <div>
+            <p>
+              Our Courses introduce Engligh through super fun and immensive
+              activities! The goal is to have a unique experince with the
+              teacher, the qroup and English this is the best way to learn!
+            </p>
+            <h2>Activities Offered This Session:</h2>
+            <ol>
+              <li>Various Activities</li>
+              <li>Active Club</li>
+              <li>Movie Club</li>
+              <li>Theater Club</li>
+              <li>Book Club</li>
+            </ol>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://i.ibb.co/CnzMYhP/Screenshot-2023-06-15-215422.png"
+            alt=""
+          />
+          <h1>Immensive Courses In A Second Language</h1>
+          <a href="#">Let the fun begin !</a>
+        </div>
+      </div>
+
+      <div class="mid-part5">
+        <div>
+          <h1>Subscribe Our Newsletter</h1>
+        </div>
+
+        <div>
+          <div>
+            <img
+              src="https://i.ibb.co/cbdWb1D/Screenshot-2023-06-15-220108.png"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <p>
+              Teaches You How To Communicate Your Unique Comedy Skillfully.
+              Virtual comedy workshop. Virtual stand up comedy. Virtual comedy
+              class.
+            </p>
+            <input type="email" placeholder="Enter your E-mail address" id="" />
+            <button>-------></button>
+          </div>
+
+          <div>
+            <img
+              src="https://i.ibb.co/1RYJDXP/Screenshot-2023-06-15-220553.png"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>
