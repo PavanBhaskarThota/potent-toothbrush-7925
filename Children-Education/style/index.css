@@ -329,6 +329,7 @@ body {
 }
 
 .mid-part5 > div:nth-child(2) > div:nth-child(2) input {
+  display: inline;
   width: 60%;
   height: 30px;
   padding: 20px;

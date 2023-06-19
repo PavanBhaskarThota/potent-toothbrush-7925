@@ -55,7 +55,7 @@
 
       <div>
         <form id="myform">
-          <label for="E-mail">E-mail</label>
+          <label for="E-mail" id="lbmail">E-mail</label>
           <input
             type="email"
             name=""
@@ -140,6 +140,8 @@
   ];
 
   let users = JSON.parse(localStorage.getItem("user"));
+  let lbmail = document.querySelector("#lbmail");
+  let lbpass = document.querySelector("#lbpass");
 
   let slide = document.querySelector(".slide");
   let img = document.createElement("img");
@@ -170,6 +172,22 @@
 
     form.reset();
   });
+
+  if (email == "") {
+    lbmail.innerText = "Enter E-mail";
+    lbmail.style.color = "red";
+  } else {
+    lbmail.innerText = "Name";
+    lbmail.style.color = "black";
+  }
+
+  if (password == "") {
+    lbpass.innerText = "Enter Password";
+    lbpass.style.color = "red";
+  } else {
+    lbpass.innerText = "Password";
+    lbpass.style.color = "black";
+  }
 
   let course = document.querySelector("#course");
 
