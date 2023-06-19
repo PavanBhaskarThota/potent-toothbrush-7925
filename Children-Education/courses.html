@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edukin Courses</title>
+
+    <!-- body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- nav bar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style -->
+    <link rel="stylesheet" href="style/courses.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <div>
+        <a href="index.html"><h1>Edukin</h1></a>
+      </div>
+
+      <div>
+        <a href="index.html">Home</a>
+        <a href="#">Programs</a>
+        <a href="courses.html">Courses</a>
+        <a href="#">Admissions</a>
+        <a href="#">Testimonial</a>
+      </div>
+      <a href="index.html" id="logout">Log out</a>
+      <a href="user.html"><button id="register"></button></a>
+    </div>
+
+    <!-- nav bar  -->
+
+    <div id="head">
+      <h1>Edukin Courses</h1>
+    </div>
+
+    <!-- mid -->
+
+    <div class="mid">
+      
+      </div>
+    </div>
+
+    <!-- footer-part1 -->
+
+    <div class="footer">
+      <div>
+        <div>
+          <h1>Contact</h1>
+          <p>Never Want To Miss A Camp Spot Ever</p>
+          <div>
+            <p>Online Course Catalogue</p>
+            <p>Book a Camp</p>
+            <p>Camp locations</p>
+            <p>Summer camps</p>
+          </div>
+        </div>
+
+        <div id="line2"></div>
+
+        <div>
+          <div>
+            <p>Address :</p>
+            <p>123 Dream Avenre, New York</p>
+          </div>
+
+          <div>
+            <p>E-mail :</p>
+            <p>hello.edukin@gmail.com</p>
+          </div>
+
+          <div>
+            <p>Telephone :</p>
+            <p>(313) 235 634 846 534/p></p>
+          </div>
+
+          <div>
+            <p>Instagram :</p>
+            <p>@hello.edukin</p>
+          </div>
+
+          <div>
+            <p>Facebook :</p>
+            <p>Edukin.eng.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p>@2021 Edukin. All rights reserved.</p>
+        <p>Terms of Use</p>
+        <p>Privacy Policy</p>
+        <p>Design By Orix Agency</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  let cont = document.querySelector(".mid");
+
+  let users = JSON.parse(localStorage.getItem("user"));
+
+
+  course = [
+        {
+            title : "> Language and Literacy Development",
+            details:"Before kindergarten, children develop key literacy skills. Learn how to integrate literacy skills in daycare and preschool settings, including emerging reading skills.",
+            more : "During the class, you'll study language and literacy development. You will also apply your knowledge in projects such as designing literacy activities.",
+            fee : 550
+        },
+
+        {
+            title : "> Social and Emotional Learning",
+            details:"Social and emotional learning play important roles in early childhood education. Learn how to help children develop their self-regulation skills and strengthen their emotionl resilience.",
+            more : "The course will teach you how to encourage healthy social relationships between children. You'll also learn how fostering trusting relationships supports social and emotional learning.",
+            fee : 750
+        },
+
+        {
+            title : "> Early Childhood Special Education",
+            details:"Explore the best practices when caring for young children with exceptional needs. The course covers instructional strategies, inclusive approaches, and differentiation in early childhood settings.",
+            more : "You will also learn how to work with families to support children with disabilities. The class might incorporate a practicum component to gain hands-on experience.",
+            fee : 630
+        },
+
+        {
+            title : "> Child Development",
+            details:"Understanding child development will help you create supportive, safe learning environments. This class covers brain relationship to emotional, physical, and social development.",
+            more : "You'll examine language skills, physical changes, and cognitive growth from birth through adolescence. The course links child development to environments like the home and classroom.",
+            fee : 450
+        },
+
+        {
+            title : "Language and Literacy Development",
+            details:"Before kindergarten, children develop key literacy skills. Learn how to integrate literacy skills in daycare and preschool settings, including emerging reading skills.",
+            more : "You'll examine language skills, physical changes, and cognitive growth from birth through adolescence. The course links child development to environments like the home and classroom.",
+            fee : 500
+        },
+
+        {
+            title : "Language and Literacy Development",
+            details:"Before kindergarten, children develop key literacy skills. Learn how to integrate literacy skills in daycare and preschool settings, including emerging reading skills.",
+            more : "You'll examine language skills, physical changes, and cognitive growth from birth through adolescence. The course links child development to environments like the home and classroom.",
+            fee : 430
+        }
+
+]
+
+
+    let name = JSON.parse(localStorage.getItem("name"));
+
+    let register = document.querySelector("#register");
+
+    let use = name.split(" ");
+
+    let user = use[0].trim();
+
+    console.log(user);
+
+    register.innerText = user;
+
+    display(course);
+
+    function display(data){
+
+    data.map((el)=>{
+
+      let card = document.createElement("div");
+      let butt = document.createElement("div");
+      let title = document.createElement("h2");
+      let details = document.createElement("p");
+      let more = document.createElement("p");
+      let fee = document.createElement("p");
+      let moreDet = document.createElement("button");
+      let lessDet = document.createElement("button");
+      let apply = document.createElement("button");
+
+      title.innerText = el.title;
+      details.innerText = el.details;
+      
+      fee.innerText = "$"+" "+el.fee;
+      fee.style.color = "red";
+      lessDet.innerText = "Less Details";
+      lessDet.style.visibility = "hidden"
+      moreDet.innerText = "More Details";
+      apply.innerText = "Apply";
+
+      
+
+     butt.append(moreDet,lessDet,apply);
+     card.append(title,details,more,fee,butt);
+     cont.append(card)
+
+     moreDet.addEventListener("click", ()=>{
+      more.innerText = el.more;
+      moreDet.style.visibility = "hidden";
+      lessDet.style.visibility = "visible";
+      butt.append(lessDet,moreDet,apply);
+     });
+
+     lessDet.addEventListener("click", ()=>{
+      more.innerText = "";
+      moreDet.style.visibility = "visible";
+      lessDet.style.visibility = "hidden";
+      butt.append(moreDet,lessDet,apply);
+     })
+
+     apply.addEventListener("click", ()=>{
+      users.map((e)=>{
+        if(e.name === name && e.course == undefined){
+          e.course = el.title;
+          alert("You have applied to",el.title)
+        }
+        else if (e.name === name && e.course !== undefined) {
+          alert("You are applied to a course")
+        }
+      })
+
+      localStorage.setItem("user", JSON.stringify(users))
+     })
+
+    })
+  }
+
+  
+</script>
