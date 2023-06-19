@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edukin</title>
+    <title>User Home Page</title>
     <!-- body -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,18 +26,18 @@
   <body>
     <div class="nav">
       <div>
-        <a href="index.html"><h1>Edukin</h1></a>
+        <a href="userhome.html"><h1>Edukin</h1></a>
       </div>
 
       <div>
-        <a href="index.html">Home</a>
+        <a href="userhome.html">Home</a>
         <a href="#">Programs</a>
-        <a href="#" id="course">Courses</a>
+        <a href="courses.html">Courses</a>
         <a href="#">Admissions</a>
         <a href="#">Testimonial</a>
       </div>
-
-      <a href="signup.html"><button id="register">Registration</button></a>
+      <a href="index.html" id="logout">Log out</a>
+      <a href="user.html"><button id="register"></button></a>
     </div>
 
     <!-- nav bar  -->
@@ -305,16 +305,15 @@
 </html>
 
 <script>
-  let course = document.querySelector("#course");
+  let name = JSON.parse(localStorage.getItem("name"));
 
-  course.addEventListener("click", () => {
-    alert("Login First");
-    window.location.href = "./login.html";
-  });
+  let register = document.querySelector("#register");
 
-  let sub = document.querySelector("#mail");
+  let use = name.split(" ");
 
-  sub.addEventListener("click", () => {
-    alert("Subscribed");
-  });
+  let user = use[0].trim();
+
+  console.log(user);
+
+  register.innerText = user;
 </script>

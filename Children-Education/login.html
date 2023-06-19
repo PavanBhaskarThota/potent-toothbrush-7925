@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+
+    <!-- body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- nav bar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style -->
+
+    <link rel="stylesheet" href="style/login.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <div>
+        <a href="index.html"><h1>Edukin</h1></a>
+      </div>
+
+      <div>
+        <a href="index.html">Home</a>
+        <a href="#">Programs</a>
+        <a href="#" id="course">Courses</a>
+        <a href="#">Admissions</a>
+        <a href="#">Testimonial</a>
+      </div>
+
+      <a href="signup.html"><button id="register">Sign Up</button></a>
+    </div>
+
+    <!-- nav -->
+
+    <div id="head">
+      <h1>Log in page</h1>
+    </div>
+
+    <!-- mid -->
+
+    <div class="mid">
+      <div class="slide"></div>
+
+      <div>
+        <form id="myform">
+          <label for="E-mail">E-mail</label>
+          <input
+            type="email"
+            name=""
+            id="email"
+            placeholder="Enter your E-mail"
+          />
+          <label for="">Password</label>
+          <input type="password" id="password" placeholder="Enter Password" />
+          <i class="toggle-password fas fa-eye"></i>
+          <input type="submit" name="" id="submit" value="Login" />
+        </form>
+
+        <p id="log">
+          Don't have an account! <a href="signup.html">Create One</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- footer-part1 -->
+
+    <div class="footer">
+      <div>
+        <div>
+          <h1>Contact</h1>
+          <p>Never Want To Miss A Camp Spot Ever</p>
+          <div>
+            <p>Online Course Catalogue</p>
+            <p>Book a Camp</p>
+            <p>Camp locations</p>
+            <p>Summer camps</p>
+          </div>
+        </div>
+
+        <div id="line2"></div>
+
+        <div>
+          <div>
+            <p>Address :</p>
+            <p>123 Dream Avenre, New York</p>
+          </div>
+
+          <div>
+            <p>E-mail :</p>
+            <p>hello.edukin@gmail.com</p>
+          </div>
+
+          <div>
+            <p>Telephone :</p>
+            <p>(313) 235 634 846 534/p></p>
+          </div>
+
+          <div>
+            <p>Instagram :</p>
+            <p>@hello.edukin</p>
+          </div>
+
+          <div>
+            <p>Facebook :</p>
+            <p>Edukin.eng.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p>@2021 Edukin. All rights reserved.</p>
+        <p>Terms of Use</p>
+        <p>Privacy Policy</p>
+        <p>Design By Orix Agency</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var images = [
+    "https://i.ibb.co/XtV6bt0/photo-1453738773917-9c3eff1db985-01.jpg",
+    "https://i.ibb.co/D5bD3Sm/photo-1437954820769-76094033b90f-01.jpg",
+    "https://i.ibb.co/DLY7BT1/photo-1530007321124-ec1b32a05339-01.jpg",
+    "https://i.ibb.co/6B2BRKc/photo-1653231008181-94fe5e2d0141-01.jpg",
+    "https://i.ibb.co/MG0cxCF/photo-1505377059067-e285a7bac49b-01.jpg",
+    "https://i.ibb.co/PGr0PhW/photo-1442819516624-aa7a9bd24b63-01.jpg",
+  ];
+
+  let users = JSON.parse(localStorage.getItem("user"));
+
+  let slide = document.querySelector(".slide");
+  let img = document.createElement("img");
+  let form = document.querySelector("#myform");
+  let profile = null;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let email = form.email.value;
+    let password = form.password.value;
+
+    let use = users.some((el) => {
+      if (el.email === email && el.password === password) {
+        let name = el.name;
+        profile = name;
+        localStorage.setItem("name", JSON.stringify(profile));
+      }
+      return el.email === email && el.password === password;
+    });
+
+    if (use) {
+      window.location.href = "./userhome.html";
+      console.log(profile);
+    } else {
+      alert("Login Not successfull");
+    }
+
+    form.reset();
+  });
+
+  let course = document.querySelector("#course");
+
+  course.addEventListener("click", () => {
+    alert("Login First");
+    window.location.href = "./login.html";
+  });
+
+  //  slideshow
+
+  window.addEventListener("load", function () {
+    img.setAttribute("src", images[0]);
+    slide.append(img);
+
+    let i = 1;
+
+    function slideshow(image) {
+      setInterval(() => {
+        if (i == images.length) {
+          i = 0;
+        }
+
+        img.setAttribute("src", images[i]);
+        i++;
+        slide.append(img);
+      }, 5000);
+    }
+
+    slideshow();
+  });
+</script>
